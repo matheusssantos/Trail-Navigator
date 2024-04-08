@@ -11,7 +11,7 @@ enum Directions {
 }
 
 class App {
-  private static FileTXT txt = new FileTXT("casoC50");
+  private static FileTXT txt = new FileTXT("casoC750");
   private static int row = 0;
   private static int col = 0;
 
@@ -20,7 +20,7 @@ class App {
     
     String numbers = "";
     String value = "";
-    Directions direction = Directions.STOPED;
+    Directions direction = Directions.RIGHT;
 
     while (value != "#") {
       if (direction == Directions.RIGHT) col++;
@@ -63,13 +63,14 @@ class App {
           direction = Directions.DOWN;
 
       }
-      else if (value.equals("*")) {
-        direction = Directions.RIGHT;
+      // else if (value.equals("*")) {
+      //   direction = Directions.RIGHT;
 
-      }
+      // }
       else if (value.equals("#")) {
         break;
       }
+
     }
 
     String[] numbersList = numbers.split(" ");
@@ -93,9 +94,13 @@ class App {
 
     for (int r = 0; r < rows-1; r++) {
       String[] chars = lines.get(r).split("");
+      
       for (int c = 0; c < chars.length-1; c++) {
         matrix[r][c] = chars[c];
-        if (matrix[r][c].equals("*")) {
+        
+        if (matrix[r][c].equals("-") && c == 0) {
+          // matrix[r][c] = "*"; 
+          System.out.println("salvou");
           col = c;
           row = r;
         }
