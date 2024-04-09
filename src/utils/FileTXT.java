@@ -185,26 +185,27 @@ public class FileTXT {
 
   public void removeEmptyLines() {
     ArrayList<String> lines = new ArrayList<>();
-
+  
     lines = this.read();
-
-    // Filtra as linhas removendo as linhas em branco
-    lines.removeIf(String::isEmpty);
-
+  
+    // Filtra as linhas removendo as linhas em branco ou que contêm apenas espaços
+    lines.removeIf(line -> line.isEmpty() || line.trim().isEmpty());
+  
     // Reescreve o arquivo apenas com as linhas não vazias
     try {
       FileWriter writer = new FileWriter(this.TXT_PATH, false); // Sobrescreve o arquivo
       BufferedWriter bufferWriter = new BufferedWriter(writer);
-
+  
       for (String line : lines) {
         bufferWriter.write(line);
         bufferWriter.newLine();
       }
-
+  
       bufferWriter.close();
       writer.close();
     } catch (IOException error) {
       error.printStackTrace();
     }
   }
+  
 }
