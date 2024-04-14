@@ -2,7 +2,7 @@
 O Trail-Navigator é um algoritmo desenvolvido em Java como trabalho para a disciplina de Algoritmos e Estruturas de Dados da PUCRS (Pontifícia Universidade Católica do Rio Grande do Sul). Ele permite navegar por uma trilha de caracteres em uma matriz, realizando operações de soma ao longo do caminho.
 
 ## Funcionamento
-O programa lê uma matriz de caracteres de um arquivo de texto e encontra um ponto de partida representado pelo caractere '-'. A partir desse ponto, ele navega pela matriz, seguindo as direções indicadas pelos caracteres '', '/', '>', e '<'. Durante a navegação, ele acumula os números encontrados na trilha até encontrar o caractere '#', momento em que a navegação para e o programa calcula a soma total dos números acumulados.
+O programa lê uma matriz de caracteres de um arquivo de texto e encontra um ponto de partida. A partir desse ponto, ele navega pela matriz, seguindo as direções indicadas pelos caracteres '\', '/', e '-'. Durante a navegação, ele acumula os números encontrados na trilha até encontrar o caractere '#', momento em que a navegação para e o programa calcula a soma total dos números acumulados.
 
 ## Uso
 Para utilizar o Trail-Navigator, siga estes passos:
