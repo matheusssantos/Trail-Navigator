@@ -28,7 +28,6 @@ class App {
       if (direction == Directions.LEFT) col--;
       if (direction == Directions.DOWN) row++;
       if (direction == Directions.UP) row--;
-      
     
       if (row < matrix.length && col < matrix[0].length) {
         value = matrix[row][col];
@@ -41,37 +40,36 @@ class App {
       } else {
         System.out.println(" ERRO ");
           break;
-        }
+      }
   
       
-        if (value.equals("\\")) {
-          if (direction == Directions.DOWN)
-            direction = Directions.RIGHT;
-          else if (direction == Directions.UP)
-            direction = Directions.LEFT;
-          else if (direction == Directions.LEFT)
-            direction = Directions.UP;
-          else if (direction == Directions.RIGHT)
-            direction = Directions.DOWN;
-  
-        } 
-        else if (value.equals("/")) {
-          if (direction == Directions.DOWN)
-            direction = Directions.LEFT;
-          else if (direction == Directions.RIGHT)
-            direction = Directions.UP;
-          else if (direction == Directions.UP)
-            direction = Directions.RIGHT;
-          else
-            direction = Directions.DOWN;
-  
-        }
-        else if (value.equals("#")) {
-          break;
-        }
+      if (value.equals("\\")) {
+        if (direction == Directions.DOWN)
+          direction = Directions.RIGHT;
+        else if (direction == Directions.UP)
+          direction = Directions.LEFT;
+        else if (direction == Directions.LEFT)
+          direction = Directions.UP;
+        else if (direction == Directions.RIGHT)
+          direction = Directions.DOWN;
+
+      } 
+      else if (value.equals("/")) {
+        if (direction == Directions.DOWN)
+          direction = Directions.LEFT;
+        else if (direction == Directions.RIGHT)
+          direction = Directions.UP;
+        else if (direction == Directions.UP)
+          direction = Directions.RIGHT;
+        else
+          direction = Directions.DOWN;
+
+      }
+      else if (value.equals("#")) {
+        break;
+      }
     }
     
-
     String[] numbersList = numbers.split(" ");
     int total = 0;
     for (String n : numbersList) {
@@ -104,8 +102,6 @@ class App {
         }
       }
     }
-
-    
 
     return matrix;
   }
