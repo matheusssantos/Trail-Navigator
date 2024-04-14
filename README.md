@@ -9,6 +9,4 @@ Para utilizar o Trail-Navigator, siga estes passos:
 
 1. Certifique-se de ter o JDK (Java Development Kit) instalado em seu sistema.
 
-2. Compile o código-fonte do programa utilizando o comando javac App.java.
-
-3. Execute o programa compilado utilizando o comando java App.
+2. Execute o método "main" da classe App.java.
